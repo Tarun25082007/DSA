@@ -14,6 +14,7 @@
  * }
  */
 class Solution {
+    // solved 
      public  void func (TreeNode root)
     {if (root == null)
     {
