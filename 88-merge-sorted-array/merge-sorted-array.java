@@ -17,14 +17,12 @@ class Solution {
             }
             
         }
-        if (x == -1 && y != -1){
+        if ( y != -1){
               for(int i=0 ; i <=y;i++){
                 nums1[i] = nums2[i];
               }
         }
-if (m==0){
-    nums1[0] = nums2[0];
-}
+
 
 
       
