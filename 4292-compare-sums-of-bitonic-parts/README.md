@@ -1,4 +1,4 @@
-<p>You are given a <strong>bitonic</strong> array <code>nums</code> of length <code>n</code>.</p>
+<h2><a href="https://leetcode.com/problems/compare-sums-of-bitonic-parts">Compare Sums of Bitonic Parts</a></h2> <img src='https://img.shields.io/badge/Difficulty-Medium-orange' alt='Difficulty: Medium' /><hr><p>You are given a <strong>bitonic</strong> array <code>nums</code> of length <code>n</code>.</p>
 
 <p>Split the array into <strong>two</strong> parts:</p>
 
