@@ -5,15 +5,16 @@ class Solution {
         int temp = 0 ;
         int high = nums.length - 1 ;
        while (mid <= high ){
-        if (mid < low){
-            mid++;
-            continue;
-        }
+        // if (mid < low){
+        //     mid++;
+        //     continue;
+        // }
          if (nums[mid] == 0){
              temp = nums[low];
             nums[low]= 0;
             nums[mid] = temp;
             low++;
+            mid++;
             continue;
         }
          if (nums[mid] == 2){
