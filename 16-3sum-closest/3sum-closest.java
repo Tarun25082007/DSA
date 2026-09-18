@@ -7,7 +7,6 @@ class Solution {
      int j = i+1;
      int k = nums.length-1;
      if  ( i !=0 && nums[i] == nums[i-1]){
-        i++;
         continue;
      }
      while(j<k){
@@ -15,9 +14,12 @@ class Solution {
         if ( Math.abs(target - sum) < Math.abs(target - co )){
             co = sum ;
             }
+            if (sum == target){
+                return sum;
+            }
         if (sum <= target ){
             j++;
-            while(j<=k){
+            while(j<k && j>i){
                 if  ( nums[j] == nums[j-1]){
                      j++;
                     continue;}
@@ -29,7 +31,7 @@ class Solution {
             }
         else if (sum>= target){
                 k--;
-                while(j<=k){
+                while(j<k){
                 if  ( nums[k] == nums[k+1]){
                 k--;
                 continue;} 
