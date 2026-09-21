@@ -4,16 +4,13 @@ class Solution {
         // i use siere of eratos 
         boolean[] ary = new boolean[n];
         Arrays.fill(ary,true);
-        for (int i = 2 ; i < Math.sqrt(n) ; i++){
+        for (int i = 2 ; i*i < n ; i++){
             if (ary[i] == false ){
                 continue;
             }
-            int j = i ;
+            int j = i*i ;
             while ( j< n){
-                if(j== i){ j+=i;
-                    continue;
-                    
-                }
+                
                 ary[j] = false ;
                 j+=i;
 
