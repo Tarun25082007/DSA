@@ -4,29 +4,27 @@ class Solution {//3
     if(s.length() == 0 || s.length()==1){
         int g = (s.length()==0)?0:1;
         return g;
-
     }
     int max=0;
-    int ng=0;
-    int l = 0;
-    for  (int i =0; i < s.length();i++){
-        if (x.containsKey(s.charAt(i))){
-         if (max< l ){
-            max = l;
-         }   
-         ng = x.get(s.charAt(i));
-         x.clear();
-         i=ng;
-         l=0;
+    int ng = 0 ;
+    int y = 0 ; int j = 0 ;
+ while (j <s.length()){
+    if (x.containsKey(s.charAt(j))){
+        max = Math.max(max,j-y);
+        ng = x.get(s.charAt(j))+1;
+        for (int i = y;i<ng;i++ ){
+            x.remove(s.charAt(i));
         }
-        else {
-            x.put(s.charAt(i),i);
-            l++;
-        }
+         x.put(s.charAt(j),j);
+         y = ng ;
+         j++;
     }
-     if (max< l){
-        max=l;
-     }
+    else {
+            x.put(s.charAt(j),j);
+        j++;
+    }
+ }
+  max = Math.max(max,j-y);
         return max ;
     }
 }
