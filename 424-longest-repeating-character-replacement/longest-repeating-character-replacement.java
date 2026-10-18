@@ -19,9 +19,10 @@ while(j<s.length()){
      }
      else{
         a[s.charAt(i) - 'A']-=1;
+        maxf = 0 ;
         for (int l = 0 ;l<a.length;l++ ){
             if(maxf<a[l]){
-                a[l]=maxf;
+                maxf=a[l];
             }
         }
         i++;
