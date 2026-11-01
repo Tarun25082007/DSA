@@ -4,6 +4,7 @@ class Solution {
        Map<Integer,Integer> y = new HashMap<>();
       x[0]=(nums[0]>0)?1:-1;
        int temp = 0 ;
+       y.put(0,-1);
         y.put(x[0],0);
        for (int i = 1; i<nums.length;i++)
        {
@@ -14,16 +15,18 @@ class Solution {
        }
      
         int max = 0 ;
-        int z = 0 ;
+        // int z = 0 ;
         for (int i = 0 ; i<nums.length ; i++)
-        {  if (x[i]== 0 ){
-            z = i;
+        // {  if (x[i]== 0 ){
+        //     z = i;
+        // }
+           { max = (max>y.get(x[i])-i)?max:y.get(x[i])-i;
         }
-            max = (max>y.get(x[i])-i)?max:y.get(x[i])-i;
-        }
-        if (max == 0 && z == 0){
-            return 0;
-        }
-        return Math.max(max,z+1) ;
+        // if (max == 0 && z == 0){
+        //     return 0;
+        // }
+        // return Math.max(max,z+1) ;
+        max = (max>y.get(0)+1)?max:y.get(0)+1;
+        return max;
     }
 }
