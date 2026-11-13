@@ -1,10 +1,8 @@
 class Solution {
     public int firstUniqChar(String s) {
         HashMap<Character , Integer> x = new HashMap<>();
-        Queue <Character> y = new LinkedList<>();
       int a = s.length();
       for (int i = 0 ; i<a ; i ++){
-        y.add(s.charAt(i));
         if (!x.containsKey(s.charAt(i))){
         x.putIfAbsent(s.charAt(i),1);
         }
