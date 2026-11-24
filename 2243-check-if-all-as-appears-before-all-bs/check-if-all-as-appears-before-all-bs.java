@@ -9,6 +9,9 @@ class Solution {
             if (s.charAt(i) == 'b' && b == s.length()){
                 b = i;
             }
+            if (b<a){
+                return false;
+            }
         }
         if (a<b){
             return true;
